@@ -47,9 +47,9 @@
 
 앞으로 진행한 게임 프로젝트와 학습 기록을 이곳에 정리할 예정입니다.
 
-| Project | Description | Tech |
-| --- | --- | --- |
-| 준비 중 | Unity 기반 게임 프로젝트를 추가할 예정입니다. | Unity, C# |
+| Project | Description | Role | Tech |
+| --- | --- | --- | --- |
+| [대경잼 - Kunekune](https://github.com/gyungminkwon/Daekyungjam-Kunekune-Project) | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | 프로그래밍 | Unity, C# |
 
 <br>
 
