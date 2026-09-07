@@ -74,7 +74,7 @@
 
 <br><br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=bbabang7709&hide_border=true&background=00000000&ring=7EE7E0&fire=F7C8A9&currStreakLabel=7EE7E0&sideLabels=9AA7B2&dates=7D8994&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="GitHub contribution streak" />
+<img src="https://streak-stats.demolab.com/?user=bbabang7709&hide_border=true&background=00000000&ring=7EE7E0&fire=F7C8A9&currStreakLabel=7EE7E0&sideLabels=9AA7B2&dates=7D8994&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="GitHub contribution streak" />
 
 <br><br>
 
