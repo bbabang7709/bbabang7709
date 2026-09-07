@@ -23,11 +23,16 @@
 
 ### Languages
 
+<div>
 <img src="https://img.shields.io/badge/C-BFD7EA?style=for-the-badge&logo=c&logoColor=2F4F6F" alt="C" />
 <img src="https://img.shields.io/badge/C%2B%2B-A9CDEB?style=for-the-badge&logo=cplusplus&logoColor=2F4F6F" alt="C++" />
 <img src="https://img.shields.io/badge/C%23-93C2E8?style=for-the-badge&logo=csharp&logoColor=2F4F6F" alt="C#" />
+</div>
+
+<div>
 <img src="https://img.shields.io/badge/Java-F7C8A9?style=for-the-badge&logo=openjdk&logoColor=6B4A35" alt="Java" />
 <img src="https://img.shields.io/badge/Python-FFE6A7?style=for-the-badge&logo=python&logoColor=5E4B1F" alt="Python" />
+</div>
 
 ### Game Development
 
