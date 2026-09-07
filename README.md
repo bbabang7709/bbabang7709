@@ -66,10 +66,10 @@
 <div align="center">
 
 <a href="https://github.com/bbabang7709">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=bbabang7709&show_icons=true&hide_border=true&bg_color=00000000&title_color=7EE7E0&icon_color=7EE7E0&text_color=9AA7B2&ring_color=7EE7E0&include_all_commits=true" alt="GitHub stats" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=bbabang7709&theme=github_dark" alt="GitHub stats" />
 </a>
 <a href="https://github.com/bbabang7709">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bbabang7709&layout=compact&hide_border=true&bg_color=00000000&title_color=7EE7E0&text_color=9AA7B2&langs_count=6" alt="Top languages" />
+  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=bbabang7709&theme=github_dark" alt="Top languages" />
 </a>
 
 <br><br>
