@@ -60,7 +60,7 @@
 
 | Project | Description | Role | Tech |
 | :--- | :--- | :---: | :---: |
-| [대경잼 - Kunekune](https://github.com/gyungminkwon/Daekyungjam-Kunekune-Project) | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | 프로그래밍 | Unity · C# |
+| [KuneKune](https://github.com/bbabang7709/KuneKune) | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | 프로그래밍 | Unity · C# |
 
 앞으로 진행한 게임 프로젝트와 학습 기록을 차곡차곡 정리할 예정입니다.
 
