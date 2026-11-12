@@ -12,13 +12,15 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      # 테마: 파스텔 초록(수풀) · 빨강(벌레) · 노랑(포인트)
+      # 수풀은 초록 계열, 벌레는 보색인 코랄 레드로 대비를 줘서 잘 보이게 함
       - name: Generate snake animations
         uses: Platane/snk@v3
         with:
           github_user_name: bbabang7709
           outputs: |
-            dist/github-contribution-grid-snake.svg?palette=github-dark&color_snake=7EE7E0&color_dots=#161B22,#203B3B,#2B6865,#45AAA3,#7EE7E0
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=7EE7E0&color_dots=#161B22,#203B3B,#2B6865,#45AAA3,#7EE7E0
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#F2667A&color_dots=#EEF1EA,#D2F0C8,#A6DE9C,#74C27A,#4E9E5A
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#FF8FA3&color_dots=#161B22,#2C4A33,#4C8A58,#86C98A,#C6F2B9
 
       - name: Deploy to output branch
         uses: peaceiris/actions-gh-pages@v4
