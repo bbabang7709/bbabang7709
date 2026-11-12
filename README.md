@@ -93,10 +93,20 @@ public class Player : MonoBehaviour
 
 | Slot | Title | Genre | Role | Engine |
 | :---: | :--- | :--- | :---: | :---: |
-| `01` | 👻 [**KuneKune**](https://github.com/bbabang7709/KuneKune) | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | Programming | Unity · C# |
+| `01` | 👻 [**KuneKune**](https://github.com/bbabang7709/KuneKune) 🏆 | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | Programming | Unity · C# |
 | `02` | 🔒 *Coming Soon...* | — | — | — |
 
 > 💡 앞으로 진행한 게임 프로젝트와 학습 기록을 차곡차곡 세이브할 예정입니다.
+
+<br>
+
+## 🏆 `> ACHIEVEMENTS` — Awards
+
+| Trophy | Achievement | Project |
+| :---: | :--- | :---: |
+| 🥉 | ![장려상](https://img.shields.io/badge/%EC%9E%A5%EB%A0%A4%EC%83%81-UNLOCKED-FFE08A?style=for-the-badge&labelColor=3D4B3F) | 👻 [KuneKune](https://github.com/bbabang7709/KuneKune) |
+
+> 🔓 *New achievement unlocked!* 다음 트로피를 향해 계속 플레이 중입니다.
 
 <br>
 
