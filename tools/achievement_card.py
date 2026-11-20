@@ -8,12 +8,11 @@
 tier: grand(대상) / gold(최우수상) / silver(우수상) / bronze(장려상) / special(특별상·입선)
 """
 import argparse
-import os
-import sys
 from xml.sax.saxutils import escape
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import pixel as px  # noqa: E402
+BG, INK, MUTED = "#F6F9F3", "#3D4B3F", "#7C8C7F"
+MONO = 'ui-monospace, "SFMono-Regular", Consolas, monospace'
+SANS = '"Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif'
 
 # 16x16 픽셀 트로피. '#' 본체, 'S' 장식(별) 자리
 TROPHY = [
@@ -77,50 +76,51 @@ def trophy_rects(t):
     return "\n    ".join(out)
 
 
-def tag_svg(tags, right=540, top=14):
-    """도트 글씨 태그 (2px 단위)."""
+def tag_svg(tags, right=536, top=18):
+    """오른쪽 위 태그 (헤더와 같은 노란 알약 모양)."""
     if not tags:
         return ""
-    text = "·".join(t.upper() for t in tags)
-    tw = px.text_width(text)
-    w, h = tw + 10, 11
-    x0 = (right // 2) - w
-    y0 = top // 2
-    cells = px.frame(x0, y0, w, h, px.YELLOW, px.YELLOW, px.YELLOW_D, notch=1)
-    cells.update(px.text_cells(text, x0 + 5, y0 + 2, px.INK))
-    return px.rects(cells, 2)
+    text = " · ".join(t.upper() for t in tags)
+    tw = round(len(text) * 7.0)
+    w = tw + 22
+    x = right - w
+    return (f'<rect x="{x}" y="{top}" width="{w}" height="22" rx="11" fill="#FFE08A" stroke="#E0B84A" stroke-width="1.5"/>\n'
+            f'  <text class="tag" x="{x + 11}" y="{top + 15}" textLength="{tw}" lengthAdjust="spacing">{escape(text)}</text>')
 
 
 def card(tier, title, desc, tags):
     t = TIERS[tier]
     label = escape(f"Achievement unlocked: {title} — {desc}")
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="104" viewBox="0 0 560 104" shape-rendering="crispEdges" role="img" aria-label="{label}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="104" viewBox="0 0 560 104" role="img" aria-label="{label}">
   <title>{label}</title>
   <defs>
     <linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.7"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="card"><rect x="8" y="8" width="544" height="88"/></clipPath>
+    <clipPath id="card"><rect width="560" height="104" rx="14"/></clipPath>
   </defs>
   <style>
-    .t {{ shape-rendering: auto; font: 700 24px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #FFFFFF; }}
-    .d {{ shape-rendering: auto; font: 400 13px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #C9D3CB; }}
+    .k {{ font: 700 11px {MONO}; fill: {MUTED}; letter-spacing: 3px; }}
+    .t {{ font: 800 24px {SANS}; fill: {INK}; }}
+    .d {{ font: 500 13px {SANS}; fill: {MUTED}; }}
+    .tag {{ font: 700 11px {MONO}; fill: {INK}; }}
     .sweep {{ animation: sweep 4.5s ease-in-out infinite; }}
     @keyframes sweep {{ 0% {{ transform: translateX(-220px); }} 45%, 100% {{ transform: translateX(600px); }} }}
   </style>
-  {px.rects(px.frame(0, 0, 140, 26, "#262E28", t["accent"], px.INK, notch=2), 4)}
   <g clip-path="url(#card)">
+    <rect width="560" height="104" fill="{BG}"/>
     <rect class="sweep" x="0" y="0" width="160" height="104" fill="url(#shine)"/>
   </g>
-  {px.rects(px.frame(4, 4, 18, 18, "#3D4B3F", "#4D5E50", "#1C221E", notch=1), 4)}
-  <g>
+  <rect x="{BOX[0]}" y="{BOX[1]}" width="{BOX[2]}" height="{BOX[2]}" rx="12" fill="#EAF0E6" stroke="{t["shade"]}" stroke-width="2"/>
+  <g shape-rendering="crispEdges">
     {trophy_rects(t)}
   </g>
-  {px.rects(px.text_cells("ACHIEVEMENT UNLOCKED", 54, 8, t["accent"]), 2)}
-  <text class="t" x="108" y="59">{escape(title)}</text>
-  <text class="d" x="108" y="81">{escape(desc)}</text>
+  <rect x="108" y="20" width="10" height="10" rx="2.5" fill="{t["base"]}" stroke="{t["shade"]}" stroke-width="1.5"/>
+  <text class="k" x="126" y="29">ACHIEVEMENT UNLOCKED</text>
+  <text class="t" x="108" y="60">{escape(title)}</text>
+  <text class="d" x="108" y="82">{escape(desc)}</text>
   {tag_svg(tags)}
 </svg>
 '''

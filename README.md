@@ -15,7 +15,7 @@
 
 <br>
 
-<img src="assets/pixel/h-profile.svg" width="100%" alt="PLAYER PROFILE" />
+<img src="assets/ui/h-profile.svg" width="100%" alt="PLAYER PROFILE — About Me" />
 
 ```csharp
 public class Player : MonoBehaviour
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-inventory.svg" width="100%" alt="INVENTORY — Tech Stack" />
+<img src="assets/ui/h-inventory.svg" width="100%" alt="INVENTORY — Tech Stack" />
 
 <table>
   <tr>
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-skill-tree.svg" width="100%" alt="SKILL TREE — What I'm Learning" />
+<img src="assets/ui/h-skill-tree.svg" width="100%" alt="SKILL TREE — What I'm Learning" />
 
 | Branch | Skills | Status |
 | :---: | :--- | :---: |
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-quest-log.svg" width="100%" alt="QUEST LOG — Goals" />
+<img src="assets/ui/h-quest-log.svg" width="100%" alt="QUEST LOG — Goals" />
 
 - [ ] **Main Quest** — Unity를 활용한 완성도 있는 개인 프로젝트 제작
 - [ ] **Side Quest** — 게임 클라이언트 개발에 필요한 C# / C++ 실력 향상
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-save-files.svg" width="100%" alt="SAVE FILES — Projects" />
+<img src="assets/ui/h-save-files.svg" width="100%" alt="SAVE FILES — Projects" />
 
 | Slot | Title | Genre | Role | Engine |
 | :---: | :--- | :--- | :---: | :---: |
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-achievements.svg" width="100%" alt="ACHIEVEMENTS — Awards" />
+<img src="assets/ui/h-achievements.svg" width="100%" alt="ACHIEVEMENTS — Awards" />
 
 <a href="https://github.com/bbabang7709/KuneKune">
   <img src="assets/achievement-kunekune.svg" width="560" alt="Achievement unlocked: 장려상 — KuneKune" />
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-stats.svg" width="100%" alt="STATS — GitHub Activity" />
+<img src="assets/ui/h-stats.svg" width="100%" alt="STATS — GitHub Activity" />
 
 <div align="center">
 
@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-<img src="assets/pixel/h-multiplayer.svg" width="100%" alt="MULTIPLAYER — Contact" />
+<img src="assets/ui/h-multiplayer.svg" width="100%" alt="MULTIPLAYER — Contact" />
 
 <div align="center">
 
@@ -157,4 +157,4 @@ _세상을 전율시킬 수 있는 게임 개발자가 되고 싶습니다._
 
 <br>
 
-<img src="assets/pixel/footer.svg" width="100%" alt="THANKS FOR PLAYING! CONTINUE? YES / NO" />
+<img src="assets/ui/footer.svg" width="100%" alt="THANKS FOR PLAYING! CONTINUE? YES / NO" />
