@@ -8,7 +8,12 @@
 tier: grand(대상) / gold(최우수상) / silver(우수상) / bronze(장려상) / special(특별상·입선)
 """
 import argparse
+import os
+import sys
 from xml.sax.saxutils import escape
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import pixel as px  # noqa: E402
 
 # 16x16 픽셀 트로피. '#' 본체, 'S' 장식(별) 자리
 TROPHY = [
@@ -72,21 +77,24 @@ def trophy_rects(t):
     return "\n    ".join(out)
 
 
-def tag_svg(tags, right=540, top=15):
+def tag_svg(tags, right=540, top=14):
+    """도트 글씨 태그 (2px 단위)."""
     if not tags:
         return ""
-    text = " · ".join(t.upper() for t in tags)
-    width = round(len(text) * 6.4 + 20)
-    x = right - width
-    return (f'<rect x="{x}" y="{top}" width="{width}" height="20" rx="10" fill="#FFE08A"/>\n'
-            f'  <text class="tag" x="{x + width / 2:g}" y="{top + 10}" text-anchor="middle" '
-            f'dominant-baseline="central">{escape(text)}</text>')
+    text = "·".join(t.upper() for t in tags)
+    tw = px.text_width(text)
+    w, h = tw + 10, 11
+    x0 = (right // 2) - w
+    y0 = top // 2
+    cells = px.frame(x0, y0, w, h, px.YELLOW, px.YELLOW, px.YELLOW_D, notch=1)
+    cells.update(px.text_cells(text, x0 + 5, y0 + 2, px.INK))
+    return px.rects(cells, 2)
 
 
 def card(tier, title, desc, tags):
     t = TIERS[tier]
     label = escape(f"Achievement unlocked: {title} — {desc}")
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="104" viewBox="0 0 560 104" role="img" aria-label="{label}">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="104" viewBox="0 0 560 104" shape-rendering="crispEdges" role="img" aria-label="{label}">
   <title>{label}</title>
   <defs>
     <linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
@@ -94,25 +102,23 @@ def card(tier, title, desc, tags):
       <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="card"><rect x="2" y="2" width="556" height="100" rx="12"/></clipPath>
+    <clipPath id="card"><rect x="8" y="8" width="544" height="88"/></clipPath>
   </defs>
   <style>
-    .k {{ font: 700 11px ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: 2.2px; fill: {t["accent"]}; }}
-    .t {{ font: 700 24px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #FFFFFF; }}
-    .d {{ font: 400 13px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #C9D3CB; }}
-    .tag {{ font: 700 10px ui-monospace, Consolas, monospace; letter-spacing: 0.3px; fill: #3D4B3F; }}
+    .t {{ shape-rendering: auto; font: 700 24px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #FFFFFF; }}
+    .d {{ shape-rendering: auto; font: 400 13px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #C9D3CB; }}
     .sweep {{ animation: sweep 4.5s ease-in-out infinite; }}
     @keyframes sweep {{ 0% {{ transform: translateX(-220px); }} 45%, 100% {{ transform: translateX(600px); }} }}
   </style>
-  <rect x="2" y="2" width="556" height="100" rx="12" fill="#262E28" stroke="{t["accent"]}" stroke-opacity="0.6" stroke-width="2"/>
+  {px.rects(px.frame(0, 0, 140, 26, "#262E28", t["accent"], px.INK, notch=2), 4)}
   <g clip-path="url(#card)">
     <rect class="sweep" x="0" y="0" width="160" height="104" fill="url(#shine)"/>
   </g>
-  <rect x="{BOX[0]}" y="{BOX[1]}" width="{BOX[2]}" height="{BOX[2]}" rx="10" fill="#3D4B3F"/>
-  <g shape-rendering="crispEdges">
+  {px.rects(px.frame(4, 4, 18, 18, "#3D4B3F", "#4D5E50", "#1C221E", notch=1), 4)}
+  <g>
     {trophy_rects(t)}
   </g>
-  <text class="k" x="108" y="29">ACHIEVEMENT UNLOCKED</text>
+  {px.rects(px.text_cells("ACHIEVEMENT UNLOCKED", 54, 8, t["accent"]), 2)}
   <text class="t" x="108" y="59">{escape(title)}</text>
   <text class="d" x="108" y="81">{escape(desc)}</text>
   {tag_svg(tags)}

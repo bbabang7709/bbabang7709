@@ -1,10 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=230&section=header&color=0:A8E6A3,50:FFE08A,100:FF9AA2&text=%EC%B2%AD%EC%98%A8&fontSize=64&fontColor=3D4B3F&fontAlignY=36&animation=fadeIn&desc=%E2%96%B6%20PLAYER%201%20%C2%B7%20Game%20Client%20Developer%20%C2%B7%20bbabang7709&descSize=17&descAlignY=56&descAlign=50" alt="청온 타이틀 화면" />
-
-<a href="https://github.com/bbabang7709">
-  <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=16&duration=2600&pause=900&color=F2667A&center=true&vCenter=true&width=560&height=40&lines=%E2%96%B6+PRESS+START+TO+CONTINUE;LOADING+GAME+CLIENT+DEV...;INPUT+%E2%86%92+LOGIC+%E2%86%92+MOVEMENT+%E2%86%92+FUN" alt="Typing title" />
-</a>
+<img src="assets/header.svg" width="100%" alt="청온 CheongOn — Game Client Developer" />
 
 ### 청온(靑溫) : 푸르고 따뜻한
 
@@ -19,7 +15,7 @@
 
 <br>
 
-## `> NEW GAME` — Player Profile
+<img src="assets/pixel/h-profile.svg" width="100%" alt="PLAYER PROFILE" />
 
 ```csharp
 public class Player : MonoBehaviour
@@ -43,7 +39,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> INVENTORY` — Tech Stack
+<img src="assets/pixel/h-inventory.svg" width="100%" alt="INVENTORY — Tech Stack" />
 
 <table>
   <tr>
@@ -71,7 +67,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> SKILL TREE` — What I'm Learning
+<img src="assets/pixel/h-skill-tree.svg" width="100%" alt="SKILL TREE — What I'm Learning" />
 
 | Branch | Skills | Status |
 | :---: | :--- | :---: |
@@ -80,7 +76,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> QUEST LOG` — Goals
+<img src="assets/pixel/h-quest-log.svg" width="100%" alt="QUEST LOG — Goals" />
 
 - [ ] **Main Quest** — Unity를 활용한 완성도 있는 개인 프로젝트 제작
 - [ ] **Side Quest** — 게임 클라이언트 개발에 필요한 C# / C++ 실력 향상
@@ -89,7 +85,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> SAVE FILES` — Projects
+<img src="assets/pixel/h-save-files.svg" width="100%" alt="SAVE FILES — Projects" />
 
 | Slot | Title | Genre | Role | Engine |
 | :---: | :--- | :--- | :---: | :---: |
@@ -100,7 +96,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> ACHIEVEMENTS` — Awards
+<img src="assets/pixel/h-achievements.svg" width="100%" alt="ACHIEVEMENTS — Awards" />
 
 <a href="https://github.com/bbabang7709/KuneKune">
   <img src="assets/achievement-kunekune.svg" width="560" alt="Achievement unlocked: 장려상 — KuneKune" />
@@ -108,7 +104,7 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> STATS` — GitHub Activity
+<img src="assets/pixel/h-stats.svg" width="100%" alt="STATS — GitHub Activity" />
 
 <div align="center">
 
@@ -117,6 +113,12 @@ public class Player : MonoBehaviour
 </a>
 <a href="https://github.com/bbabang7709">
   <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=bbabang7709&theme=github_dark" alt="Top languages" />
+</a>
+
+<br><br>
+
+<a href="https://solved.ac/profile/bbangeum55">
+  <img src="https://mazassumnida.wtf/api/v2/generate_badge?boj=bbangeum55" alt="Baekjoon solved.ac profile" />
 </a>
 
 <br><br>
@@ -138,11 +140,12 @@ public class Player : MonoBehaviour
 
 <br>
 
-## `> MULTIPLAYER` — Contact
+<img src="assets/pixel/h-multiplayer.svg" width="100%" alt="MULTIPLAYER — Contact" />
 
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-@bbabang7709-3D4B3F?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/bbabang7709)
+[![Baekjoon](https://img.shields.io/badge/Baekjoon-bbangeum55-FFE08A?style=for-the-badge&logoColor=3D4B3F)](https://www.acmicpc.net/user/bbangeum55)
 [![Email](https://img.shields.io/badge/Email-kdi6851%40gmail.com-FF9AA2?style=for-the-badge&logo=gmail&logoColor=3D4B3F)](mailto:kdi6851@gmail.com)
 [![Email](https://img.shields.io/badge/Email-bbangeum1588%40naver.com-A8E6A3?style=for-the-badge&logo=naver&logoColor=3D4B3F)](mailto:bbangeum1588@naver.com)
 
@@ -150,8 +153,8 @@ public class Player : MonoBehaviour
 
 _세상을 전율시킬 수 있는 게임 개발자가 되고 싶습니다._
 
-**`▶ CONTINUE?`** &nbsp; `YES` &nbsp;/&nbsp; `NO`
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:FF9AA2,50:FFE08A,100:A8E6A3" alt="footer" />
-
 </div>
+
+<br>
+
+<img src="assets/pixel/footer.svg" width="100%" alt="THANKS FOR PLAYING! CONTINUE? YES / NO" />
