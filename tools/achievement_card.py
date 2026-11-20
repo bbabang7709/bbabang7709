@@ -10,7 +10,7 @@ tier: grand(대상) / gold(최우수상) / silver(우수상) / bronze(장려상)
 import argparse
 from xml.sax.saxutils import escape
 
-BG, INK, MUTED = "#F6F9F3", "#3D4B3F", "#7C8C7F"
+BG, INK, TEXT, MUTED = "#1C221E", "#3D4B3F", "#EEF3EC", "#8FA394"
 MONO = 'ui-monospace, "SFMono-Regular", Consolas, monospace'
 SANS = '"Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif'
 
@@ -96,14 +96,14 @@ def card(tier, title, desc, tags):
   <defs>
     <linearGradient id="shine" x1="0" x2="1" y1="0" y2="0">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.08"/>
       <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="card"><rect width="560" height="104" rx="14"/></clipPath>
   </defs>
   <style>
     .k {{ font: 700 11px {MONO}; fill: {MUTED}; letter-spacing: 3px; }}
-    .t {{ font: 800 24px {SANS}; fill: {INK}; }}
+    .t {{ font: 800 24px {SANS}; fill: {TEXT}; }}
     .d {{ font: 500 13px {SANS}; fill: {MUTED}; }}
     .tag {{ font: 700 11px {MONO}; fill: {INK}; }}
     .sweep {{ animation: sweep 4.5s ease-in-out infinite; }}
@@ -113,7 +113,7 @@ def card(tier, title, desc, tags):
     <rect width="560" height="104" fill="{BG}"/>
     <rect class="sweep" x="0" y="0" width="160" height="104" fill="url(#shine)"/>
   </g>
-  <rect x="{BOX[0]}" y="{BOX[1]}" width="{BOX[2]}" height="{BOX[2]}" rx="12" fill="#EAF0E6" stroke="{t["shade"]}" stroke-width="2"/>
+  <rect x="{BOX[0]}" y="{BOX[1]}" width="{BOX[2]}" height="{BOX[2]}" rx="12" fill="#262E28" stroke="{t["shade"]}" stroke-width="2"/>
   <g shape-rendering="crispEdges">
     {trophy_rects(t)}
   </g>

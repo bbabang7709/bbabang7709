@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="64" viewBox="0 0 960 64" role="img" aria-label="PLAYER PROFILE — About Me">
   <title>PLAYER PROFILE — About Me</title>
   <style>
-    .t { font: 700 17px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #3D4B3F; letter-spacing: 3px; }
-    .s { font: 500 13px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #7C8C7F; }
-    .n { font: 700 12px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #7C8C7F; letter-spacing: 2px; }
+    .t { font: 700 17px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #EEF3EC; letter-spacing: 3px; }
+    .s { font: 500 13px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #8FA394; }
+    .n { font: 700 12px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #8FA394; letter-spacing: 2px; }
     .hop { transform-box: fill-box; transform-origin: 50% 100%; animation: hop 2.4s ease-in-out infinite; }
     @keyframes hop { 0%, 70%, 100% { transform: translateY(0); } 80% { transform: translateY(-7px); } 90% { transform: translateY(0) scaleY(.85); } }
   </style>
-  <rect width="960" height="64" rx="14" fill="#F6F9F3"/>
+  <rect width="960" height="64" rx="14" fill="#1C221E"/>
   <rect class="hop" x="28" y="22" width="20" height="20" rx="5" fill="#A8E6A3" stroke="#74C27A" stroke-width="2"/>
   <text class="t" x="68" y="38" textLength="182" lengthAdjust="spacing">PLAYER PROFILE</text>
   <text class="s" x="267" y="38">About Me</text>

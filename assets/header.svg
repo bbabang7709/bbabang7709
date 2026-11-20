@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-label="청온 CheongOn — Game Client Developer">
   <title>청온 CheongOn — Game Client Developer</title>
   <style>
-    .title { font: 800 64px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #3D4B3F; letter-spacing: -1px; }
-    .sub   { font: 600 13px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #7C8C7F; letter-spacing: 3px; }
-    .hud   { font: 700 12px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #7C8C7F; letter-spacing: 2px; }
+    .title { font: 800 64px "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #EEF3EC; letter-spacing: -1px; }
+    .sub   { font: 600 13px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #8FA394; letter-spacing: 3px; }
+    .hud   { font: 700 12px ui-monospace, "SFMono-Regular", Consolas, monospace; fill: #8FA394; letter-spacing: 2px; }
 
     /* 장애물 두 개가 2초 간격으로 지나가고(각 4초 주기), 플레이어는 2초마다 그 타이밍에 점프 */
     .runner { animation: jump 2s linear infinite; }
@@ -43,7 +43,7 @@
   </defs>
 
   <g clip-path="url(#frame)">
-    <rect width="960" height="260" fill="#F6F9F3"/>
+    <rect width="960" height="260" fill="#1C221E"/>
 
     <!-- HUD -->
     <text class="hud" x="896" y="46" text-anchor="end">WORLD 1-1</text>
@@ -56,8 +56,8 @@
     <rect class="blink" x="414" y="131" width="8" height="13" fill="#A8E6A3"/>
 
     <!-- 바닥 -->
-    <rect x="0" y="214" width="960" height="2" fill="#3D4B3F"/>
-    <g class="dashes" fill="#C9D3CB">
+    <rect x="0" y="214" width="960" height="2" fill="#5C6B5F"/>
+    <g class="dashes" fill="#3A453C">
       <rect x="10" y="226" width="18" height="2"/><rect x="62" y="234" width="8" height="2"/>
       <rect x="112" y="226" width="18" height="2"/><rect x="164" y="234" width="8" height="2"/>
       <rect x="214" y="226" width="18" height="2"/><rect x="266" y="234" width="8" height="2"/>
@@ -82,7 +82,7 @@
     </g>
 
     <!-- 플레이어 -->
-    <ellipse class="shadow" cx="151" cy="216" rx="13" ry="3" fill="#3D4B3F"/>
+    <ellipse class="shadow" cx="151" cy="216" rx="13" ry="3" fill="#000000"/>
     <g class="runner">
       <rect x="140" y="190" width="24" height="24" rx="6" fill="#FF9AA2" stroke="#F2667A" stroke-width="2"/>
       <rect x="154" y="197" width="4" height="7" rx="1" fill="#3D4B3F"/>

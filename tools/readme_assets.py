@@ -2,17 +2,19 @@
 
     python tools/readme_assets.py
 
-연한 바탕 + 둥근 모서리 + 진한 초록 글씨 + 테마 3색 포인트.
+어두운 바탕 + 둥근 모서리 + 밝은 글씨 + 테마 3색 포인트.
 """
 import os
 from xml.sax.saxutils import escape
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "ui")
 
-BG = "#F6F9F3"
-INK = "#3D4B3F"
-MUTED = "#7C8C7F"
-LINE = "#C9D3CB"
+BG = "#1C221E"
+INK = "#3D4B3F"       # 캐릭터 눈 등 진한 색
+TEXT = "#EEF3EC"
+MUTED = "#8FA394"
+LINE = "#3A453C"
+GROUND = "#5C6B5F"
 GREEN, GREEN_D = "#A8E6A3", "#74C27A"
 YELLOW, YELLOW_D = "#FFE08A", "#E0B84A"
 RED, RED_D = "#FF9AA2", "#F2667A"
@@ -50,7 +52,7 @@ def section(i, slug, title, sub):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="64" viewBox="0 0 960 64" role="img" aria-label="{label}">
   <title>{label}</title>
   <style>
-    .t {{ font: 700 17px {MONO}; fill: {INK}; letter-spacing: 3px; }}
+    .t {{ font: 700 17px {MONO}; fill: {TEXT}; letter-spacing: 3px; }}
     .s {{ font: 500 13px {SANS}; fill: {MUTED}; }}
     .n {{ font: 700 12px {MONO}; fill: {MUTED}; letter-spacing: 2px; }}
     .hop {{ transform-box: fill-box; transform-origin: 50% 100%; animation: hop 2.4s ease-in-out infinite; }}
@@ -77,7 +79,7 @@ def footer():
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="160" viewBox="0 0 960 160" role="img" aria-label="THANKS FOR PLAYING! CONTINUE? YES / NO">
   <title>THANKS FOR PLAYING! CONTINUE? YES / NO</title>
   <style>
-    .t {{ font: 700 17px {MONO}; fill: {INK}; letter-spacing: 4px; }}
+    .t {{ font: 700 17px {MONO}; fill: {TEXT}; letter-spacing: 4px; }}
     .c {{ font: 700 14px {MONO}; fill: {MUTED}; letter-spacing: 3px; }}
     .y {{ fill: {RED_D}; }}
     .blink {{ animation: blink 1.1s steps(1) infinite; }}
@@ -97,11 +99,11 @@ def footer():
     <text class="c y" x="506" y="84" textLength="31" lengthAdjust="spacing">YES</text>
     <text class="c" x="561" y="84" textLength="20" lengthAdjust="spacing">NO</text>
 
-    <rect x="0" y="120" width="960" height="2" fill="{INK}"/>
+    <rect x="0" y="120" width="960" height="2" fill="{GROUND}"/>
     <g fill="{LINE}">{dashes}</g>
 
     <!-- 플레이어: 스테이지를 끝내고 숨 고르는 중 -->
-    <ellipse cx="151" cy="122" rx="13" ry="3" fill="{INK}" opacity=".3"/>
+    <ellipse cx="151" cy="122" rx="13" ry="3" fill="#000000" opacity=".35"/>
     <g class="idle">
       <rect x="140" y="96" width="24" height="24" rx="6" fill="{RED}" stroke="{RED_D}" stroke-width="2"/>
       <rect x="154" y="103" width="4" height="7" rx="1" fill="{INK}"/>
@@ -109,7 +111,7 @@ def footer():
     </g>
 
     <!-- 골인 깃발 -->
-    <rect x="806" y="64" width="3" height="56" fill="{INK}"/>
+    <rect x="806" y="64" width="3" height="56" fill="{MUTED}"/>
     <circle cx="807.5" cy="62" r="4" fill="{YELLOW}" stroke="{YELLOW_D}" stroke-width="1.5"/>
     <path class="wave" d="M809 68 h30 l-8 9 8 9 h-30 z" fill="{GREEN}" stroke="{GREEN_D}" stroke-width="2" stroke-linejoin="round"/>
     <rect x="796" y="114" width="23" height="6" rx="2" fill="{GREEN}" stroke="{GREEN_D}" stroke-width="2"/>
