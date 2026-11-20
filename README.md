@@ -90,8 +90,10 @@ public class Player : MonoBehaviour
 | Slot | Title | Genre | Role | Engine |
 | :---: | :--- | :--- | :---: | :---: |
 | `01` | [**KuneKune**](https://github.com/bbabang7709/KuneKune) | 납량특집: 쿠네쿠네를 피해 탈출하는 공포게임 | Programming | Unity · C# |
-| `02` | *Empty Slot* | — | — | — |
+| `02` | [**Dash Prime**](https://cheongon.itch.io/dash-prime) | 액션: 대시가 곧 국력이다. | Solo Dev<br><sub>기획 · 개발</sub> | Unity · C# |
+| `03` | *Empty Slot* | — | — | — |
 
+> 일부 게임은 [itch.io](https://cheongon.itch.io/)에서 직접 플레이할 수 있습니다.<br>
 > 앞으로 진행한 게임 프로젝트와 학습 기록을 차곡차곡 세이브할 예정입니다.
 
 <br>
@@ -145,6 +147,7 @@ public class Player : MonoBehaviour
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-@bbabang7709-3D4B3F?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/bbabang7709)
+[![itch.io](https://img.shields.io/badge/itch.io-CheongOn-FF9AA2?style=for-the-badge&logo=itchdotio&logoColor=3D4B3F)](https://cheongon.itch.io/)
 [![Baekjoon](https://img.shields.io/badge/Baekjoon-bbangeum55-FFE08A?style=for-the-badge&logoColor=3D4B3F)](https://www.acmicpc.net/user/bbangeum55)
 [![Email](https://img.shields.io/badge/Email-kdi6851%40gmail.com-FF9AA2?style=for-the-badge&logo=gmail&logoColor=3D4B3F)](mailto:kdi6851@gmail.com)
 [![Email](https://img.shields.io/badge/Email-bbangeum1588%40naver.com-A8E6A3?style=for-the-badge&logo=naver&logoColor=3D4B3F)](mailto:bbangeum1588@naver.com)
